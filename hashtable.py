@@ -3,6 +3,10 @@ class ListNode():
         self.pair = (key, val)
         self.next = None
 
+    def __repr__(self):
+        return str(self.pair)
+
+
 class hashtable():
     size = 10
     def __init__(self):
@@ -73,6 +77,9 @@ class hashtable():
                     current = current.next
                     prev = prev.next
 
+    def __repr__(self):
+        return str(self.hashTable)
+
 obj = hashtable()
 obj.put(10, 5)
 obj.put(9, 8)
@@ -81,5 +88,7 @@ obj.put(4, 1)
 obj.put(8, 2)
 obj.put(7, 22)
 getObj = obj.get(10)
-obj.remove(4, 11)
+obj.remove(4)
+
 print(obj.hashTable)
+
