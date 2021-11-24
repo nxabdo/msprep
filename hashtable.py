@@ -2,7 +2,7 @@ class ListNode():
     def __init__(self, key, val):
         self.pair = (key, val)
         self.next = None
-
+    #Allows for the hashtable to print out the actual values rather than the object location
     def __repr__(self):
         return str(self.pair)
 
@@ -76,9 +76,6 @@ class hashtable():
                     #otherwise move current to next node in the hash table
                     current = current.next
                     prev = prev.next
-
-    def __repr__(self):
-        return str(self.hashTable)
 
 obj = hashtable()
 obj.put(10, 5)
